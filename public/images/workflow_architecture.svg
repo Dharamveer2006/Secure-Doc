@@ -1,0 +1,397 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 740" width="100%" height="100%">
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+    <filter id="pillShadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#d97706" />
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#9333ea" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1280" height="740" fill="#f8fafc" />
+
+  <!-- Subtle Technical Grid Pattern -->
+  <g stroke="#e2e8f0" stroke-width="0.75" opacity="0.6">
+    <line x1="0" y1="60" x2="1280" y2="60" />
+    <line x1="0" y1="180" x2="1280" y2="180" />
+    <line x1="0" y1="360" x2="1280" y2="360" />
+    <line x1="0" y1="540" x2="1280" y2="540" />
+    <line x1="0" y1="680" x2="1280" y2="680" />
+    <line x1="320" y1="60" x2="320" y2="680" stroke-dasharray="4,4" />
+    <line x1="640" y1="60" x2="640" y2="680" stroke-dasharray="4,4" />
+    <line x1="960" y1="60" x2="960" y2="680" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Top Enterprise Header Bar -->
+  <rect x="30" y="24" width="1220" height="74" rx="14" fill="url(#headerGrad)" filter="url(#cardShadow)" />
+  <g transform="translate(54, 42)">
+    <!-- Government Seal Badge Icon -->
+    <rect x="0" y="0" width="38" height="38" rx="8" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="19" y="24" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="16" font-weight="900" text-anchor="middle">SD</text>
+
+    <!-- Header Titles -->
+    <text x="52" y="17" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="800" letter-spacing="0.3">
+      SECURE-DOC: CRYPTOGRAPHIC ENCLAVE &amp; EVIDENTIARY ARCHITECTURE
+    </text>
+    <text x="52" y="33" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11.5" font-weight="500">
+      Smart India Hackathon 2026 • Ministry of Home Affairs / NCRB • Section 65B Indian Evidence Act Compliant
+    </text>
+
+    <!-- Top Right Status Badges -->
+    <g transform="translate(860, 4)">
+      <rect x="0" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="12" cy="13" r="4" fill="#10b981" />
+      <text x="24" y="17" fill="#cbd5e1" font-family="monospace" font-size="10.5" font-weight="700">AES-256 / SHA-256</text>
+
+      <rect x="140" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="65" y="17" fill="#60a5fa" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">EAL6+ ENCLAVE</text>
+    </g>
+  </g>
+
+  <!-- 4 PRIMARY ARCHITECTURAL COLUMNS (CARDS) -->
+
+  <!-- ========================================================================= -->
+  <!-- PHASE 1: UNIVERSAL INGESTION & LOCAL INSPECTION -->
+  <!-- ========================================================================= -->
+  <g transform="translate(30, 120)" filter="url(#cardShadow)">
+    <rect width="285" height="540" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <path d="M 0 14 Q 0 0 14 0 L 271 0 Q 285 0 285 14 L 285 54 L 0 54 Z" fill="#fffbeb" />
+    <line x1="0" y1="54" x2="285" y2="54" stroke="#fde68a" stroke-width="1.5" />
+
+    <!-- Phase Badge -->
+    <rect x="16" y="14" width="70" height="24" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1" />
+    <text x="51" y="30" fill="#b45309" font-family="monospace" font-size="10" font-weight="800" text-anchor="middle">STEP 01</text>
+    <text x="96" y="31" fill="#78350f" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Evidence Ingestion</text>
+
+    <!-- Subtitle -->
+    <text x="16" y="76" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="600">
+      Universal Multi-Modal Intake
+    </text>
+
+    <!-- Items Inside Column 1 -->
+    <!-- Modality 1: Scanned FIRs -->
+    <g transform="translate(16, 92)">
+      <rect width="253" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <rect x="10" y="10" width="32" height="32" rx="6" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+      <text x="26" y="31" fill="#d97706" font-family="system-ui, sans-serif" font-size="14" font-weight="800" text-anchor="middle">FIR</text>
+      <text x="50" y="24" fill="#0f172a" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Police FIRs &amp; Seizures</text>
+      <text x="50" y="38" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">Scanned paper / Panchnama</text>
+    </g>
+
+    <!-- Modality 2: Forensic Ballistics & Dockets -->
+    <g transform="translate(16, 154)">
+      <rect width="253" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <rect x="10" y="10" width="32" height="32" rx="6" fill="#f3e8ff" stroke="#e9d5ff" stroke-width="1" />
+      <text x="26" y="31" fill="#9333ea" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">PDF</text>
+      <text x="50" y="24" fill="#0f172a" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">CFSL Laboratory Reports</text>
+      <text x="50" y="38" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">Ballistics, DNA &amp; GSR tests</text>
+    </g>
+
+    <!-- Modality 3: Audio & CCTV -->
+    <g transform="translate(16, 216)">
+      <rect width="253" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <rect x="10" y="10" width="32" height="32" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+      <text x="26" y="31" fill="#2563eb" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">AV</text>
+      <text x="50" y="24" fill="#0f172a" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Audio Wiretaps &amp; CCTV</text>
+      <text x="50" y="38" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">WAV waveform &amp; MP4 video</text>
+    </g>
+
+    <!-- Modality 4: Forensic Disk Dumps -->
+    <g transform="translate(16, 278)">
+      <rect width="253" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <rect x="10" y="10" width="32" height="32" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+      <text x="26" y="31" fill="#059669" font-family="monospace" font-size="11" font-weight="800" text-anchor="middle">HEX</text>
+      <text x="50" y="24" fill="#0f172a" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">NVMe Dumps &amp; PCAPs</text>
+      <text x="50" y="38" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">Raw sector &amp; packet logs</text>
+    </g>
+
+    <!-- Sub-Process: In-Browser OCR -->
+    <g transform="translate(16, 345)">
+      <rect width="253" height="96" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5" />
+      <text x="14" y="22" fill="#92400e" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
+        CLIENT TESSERACT.JS OCR
+      </text>
+      <text x="14" y="40" fill="#475569" font-family="system-ui, sans-serif" font-size="10">
+        • Client WebAssembly Web Worker
+      </text>
+      <text x="14" y="58" fill="#475569" font-family="system-ui, sans-serif" font-size="10">
+        • Regex Legal Entity Extraction
+      </text>
+      <text x="14" y="76" fill="#475569" font-family="system-ui, sans-serif" font-size="10">
+        • FIR No, Accused, IPC/BNS Sections
+      </text>
+      <rect x="175" y="8" width="68" height="18" rx="4" fill="#fef3c7" />
+      <text x="209" y="21" fill="#92400e" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle">Zero Leak</text>
+    </g>
+
+    <!-- Security Guarantee Badge -->
+    <g transform="translate(16, 460)">
+      <rect width="253" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+      <text x="14" y="20" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="700">
+        GUARANTEE AT INGESTION:
+      </text>
+      <text x="14" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">
+        Files stay 100% inside browser memory.
+      </text>
+      <text x="14" y="49" fill="#0369a1" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">
+        No plaintext dispatched to cloud.
+      </text>
+    </g>
+  </g>
+
+  <!-- CONNECTOR 1 -> 2 -->
+  <path d="M 315 280 L 342 280" fill="none" stroke="#d97706" stroke-width="2.5" marker-end="url(#arrowAmber)" />
+  <text x="328" y="270" fill="#b45309" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle">BUFFER</text>
+
+  <!-- ========================================================================= -->
+  <!-- PHASE 2: CRYPTOGRAPHIC ENCLAVE & SEAL -->
+  <!-- ========================================================================= -->
+  <g transform="translate(345, 120)" filter="url(#cardShadow)">
+    <rect width="285" height="540" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <path d="M 0 14 Q 0 0 14 0 L 271 0 Q 285 0 285 14 L 285 54 L 0 54 Z" fill="#eff6ff" />
+    <line x1="0" y1="54" x2="285" y2="54" stroke="#bfdbfe" stroke-width="1.5" />
+
+    <!-- Phase Badge -->
+    <rect x="16" y="14" width="70" height="24" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1" />
+    <text x="51" y="30" fill="#1d4ed8" font-family="monospace" font-size="10" font-weight="800" text-anchor="middle">STEP 02</text>
+    <text x="96" y="31" fill="#1e3a8a" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Crypto Enclave</text>
+
+    <!-- Subtitle -->
+    <text x="16" y="76" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="600">
+      Zero-Knowledge Client Sealing
+    </text>
+
+    <!-- Step 2.1: SHA-256 Pre-Hash -->
+    <g transform="translate(16, 92)">
+      <rect width="253" height="68" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">1. SHA-256 Digest Engine</text>
+      <text x="12" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Calculated on RAW byte buffer</text>
+      <rect x="12" y="44" width="229" height="18" rx="4" fill="#eff6ff" />
+      <text x="16" y="56" fill="#2563eb" font-family="monospace" font-size="9" font-weight="700">FIPS 180-4 • 256-bit Immutable Hash</text>
+    </g>
+
+    <!-- Step 2.2: AES-256-GCM Envelope -->
+    <g transform="translate(16, 172)">
+      <rect width="253" height="84" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">2. AES-256-GCM Encryption</text>
+      <text x="12" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">NIST SP 800-38D authenticated cipher</text>
+      <text x="12" y="52" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">• Unique ephemeral key &amp; IV per file</text>
+      <rect x="12" y="60" width="229" height="18" rx="4" fill="#dcfce7" />
+      <text x="16" y="72" fill="#15803d" font-family="monospace" font-size="9" font-weight="700">Confidentiality + Authenticity</text>
+    </g>
+
+    <!-- Step 2.3: PKI Digital Signature -->
+    <g transform="translate(16, 268)">
+      <rect width="253" height="80" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">3. Officer PKI Digital Signature</text>
+      <text x="12" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Attestation by investigating officer</text>
+      <text x="12" y="50" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">NIC-CA Class 3 e-Sign standard</text>
+      <rect x="12" y="56" width="229" height="18" rx="4" fill="#ede9fe" />
+      <text x="16" y="68" fill="#6d28d9" font-family="monospace" font-size="9" font-weight="700">Sec 65B Electronic Certificate</text>
+    </g>
+
+    <!-- Security Envelope Output Box -->
+    <g transform="translate(16, 362)">
+      <rect width="253" height="78" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5" />
+      <text x="14" y="20" fill="#1e40af" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
+        ENCRYPTED EVIDENCE BUNDLE
+      </text>
+      <text x="14" y="37" fill="#334155" font-family="monospace" font-size="9.5">• Ciphertext Stream (Base64)</text>
+      <text x="14" y="52" fill="#334155" font-family="monospace" font-size="9.5">• SHA-256 Digest Tag</text>
+      <text x="14" y="67" fill="#334155" font-family="monospace" font-size="9.5">• Officer Digital Signature</text>
+    </g>
+
+    <!-- Integrity Guarantee -->
+    <g transform="translate(16, 460)">
+      <rect width="253" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+      <text x="14" y="20" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="700">
+        ZERO-KNOWLEDGE PROPERTY:
+      </text>
+      <text x="14" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">
+        Server only ever sees ciphertext &amp;
+      </text>
+      <text x="14" y="49" fill="#1e40af" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">
+        the mathematical SHA-256 proof.
+      </text>
+    </g>
+  </g>
+
+  <!-- CONNECTOR 2 -> 3 -->
+  <path d="M 630 280 L 657 280" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrowBlue)" />
+  <text x="644" y="270" fill="#1d4ed8" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle">DISPATCH</text>
+
+  <!-- ========================================================================= -->
+  <!-- PHASE 3: DECOUPLED STORAGE & BLOCKCHAIN ANCHOR -->
+  <!-- ========================================================================= -->
+  <g transform="translate(660, 120)" filter="url(#cardShadow)">
+    <rect width="285" height="540" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <path d="M 0 14 Q 0 0 14 0 L 271 0 Q 285 0 285 14 L 285 54 L 0 54 Z" fill="#faf5ff" />
+    <line x1="0" y1="54" x2="285" y2="54" stroke="#e9d5ff" stroke-width="1.5" />
+
+    <!-- Phase Badge -->
+    <rect x="16" y="14" width="70" height="24" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1" />
+    <text x="51" y="30" fill="#7e22ce" font-family="monospace" font-size="10" font-weight="800" text-anchor="middle">STEP 03</text>
+    <text x="96" y="31" fill="#581c87" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Ledger &amp; Storage</text>
+
+    <!-- Subtitle -->
+    <text x="16" y="76" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="600">
+      Decoupled Dual-Layer Repository
+    </text>
+
+    <!-- Storage Layer: GovCloud / IPFS -->
+    <g transform="translate(16, 92)">
+      <rect width="253" height="96" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">Layer A: Storage Vault</text>
+      <text x="12" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Decoupled Encrypted Storage</text>
+      <text x="12" y="52" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">• GovCloud Isolated Object Store</text>
+      <text x="12" y="67" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">• IPFS Content Addressable CID</text>
+      <rect x="12" y="74" width="229" height="16" rx="4" fill="#f1f5f9" />
+      <text x="16" y="86" fill="#475569" font-family="monospace" font-size="8.5">CID: QmXoypizjW3WknFiJnKLwHCnL...</text>
+    </g>
+
+    <!-- Ledger Layer: Permissioned Blockchain -->
+    <g transform="translate(16, 202)">
+      <rect width="253" height="110" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">Layer B: Blockchain Ledger</text>
+      <text x="12" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Permissioned MHA Chain Node</text>
+      <text x="12" y="52" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">• Merkle Hash Chain Anchoring</text>
+      <text x="12" y="67" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">• Timestamped Block Commitment</text>
+      <rect x="12" y="74" width="229" height="30" rx="4" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1" />
+      <text x="16" y="88" fill="#7e22ce" font-family="monospace" font-size="9" font-weight="700">Block #14,892 • PrevHash Match</text>
+      <text x="16" y="99" fill="#9333ea" font-family="monospace" font-size="8.5">Tx: 0x8a7f92b... (NIC Confirmed)</text>
+    </g>
+
+    <!-- Section 65B Audit Trail -->
+    <g transform="translate(16, 326)">
+      <rect width="253" height="114" rx="10" fill="#faf5ff" stroke="#d8b4fe" stroke-width="1.5" />
+      <text x="14" y="20" fill="#6b21a8" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
+        IMMUTABLE AUDIT LOG
+      </text>
+      <text x="14" y="37" fill="#334155" font-family="system-ui, sans-serif" font-size="9.5">• Append-Only Cryptographic Trail</text>
+      <text x="14" y="52" fill="#334155" font-family="system-ui, sans-serif" font-size="9.5">• Officer Identity + VPN Trace</text>
+      <text x="14" y="67" fill="#334155" font-family="system-ui, sans-serif" font-size="9.5">• Indian Evidence Act Sec 65B(4)</text>
+      <rect x="12" y="78" width="229" height="26" rx="6" fill="#7e22ce" />
+      <text x="126" y="95" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle">
+        Court Admissible Ledger
+      </text>
+    </g>
+
+    <!-- Storage Guarantee -->
+    <g transform="translate(16, 460)">
+      <rect width="253" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+      <text x="14" y="20" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="700">
+        TAMPER EVIDENCE GUARANTEE:
+      </text>
+      <text x="14" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">
+        Any modification to storage bitstream
+      </text>
+      <text x="14" y="49" fill="#7e22ce" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">
+        instantly invalidates blockchain hash.
+      </text>
+    </g>
+  </g>
+
+  <!-- CONNECTOR 3 -> 4 -->
+  <path d="M 945 280 L 972 280" fill="none" stroke="#9333ea" stroke-width="2.5" marker-end="url(#arrowPurple)" />
+  <text x="959" y="270" fill="#7e22ce" font-family="monospace" font-size="9" font-weight="700" text-anchor="middle">VERIFY</text>
+
+  <!-- ========================================================================= -->
+  <!-- PHASE 4: SECURE VIEWER, ACLS & JUDICIAL COURT -->
+  <!-- ========================================================================= -->
+  <g transform="translate(975, 120)" filter="url(#cardShadow)">
+    <rect width="275" height="540" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <path d="M 0 14 Q 0 0 14 0 L 261 0 Q 275 0 275 14 L 275 54 L 0 54 Z" fill="#ecfdf5" />
+    <line x1="0" y1="54" x2="275" y2="54" stroke="#a7f3d0" stroke-width="1.5" />
+
+    <!-- Phase Badge -->
+    <rect x="16" y="14" width="70" height="24" rx="6" fill="#d1fae5" stroke="#10b981" stroke-width="1" />
+    <text x="51" y="30" fill="#047857" font-family="monospace" font-size="10" font-weight="800" text-anchor="middle">STEP 04</text>
+    <text x="96" y="31" fill="#064e3b" font-family="system-ui, sans-serif" font-size="13" font-weight="800">Court &amp; Discovery</text>
+
+    <!-- Subtitle -->
+    <text x="16" y="76" fill="#64748b" font-family="system-ui, sans-serif" font-size="11" font-weight="600">
+      Decryption &amp; Integrity Verification
+    </text>
+
+    <!-- Feature 4.1: Client-Side Decryption -->
+    <g transform="translate(16, 92)">
+      <rect width="243" height="74" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">1. Client-Side AES Decrypt</text>
+      <text x="12" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Authorized key unlocks bitstream</text>
+      <rect x="12" y="44" width="219" height="22" rx="4" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+      <text x="20" y="58" fill="#059669" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800">✓ 100% SHA-256 Bit Match</text>
+    </g>
+
+    <!-- Feature 4.2: Inter-Agency Sharing & ACL -->
+    <g transform="translate(16, 178)">
+      <rect width="243" height="80" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">2. Time-Expiring Sharing</text>
+      <text x="12" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Cross-agency discovery bundles</text>
+      <text x="12" y="50" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">• 24h / 72h TTL access links</text>
+      <text x="12" y="64" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">• Instant cryptographic revocation</text>
+    </g>
+
+    <!-- Feature 4.3: Dynamic DLP Watermarking -->
+    <g transform="translate(16, 270)">
+      <rect width="243" height="74" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" />
+      <text x="12" y="20" fill="#1e293b" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800">3. Forensic DLP Watermark</text>
+      <text x="12" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">Dynamic overlay on every render:</text>
+      <rect x="12" y="44" width="219" height="20" rx="4" fill="#f1f5f9" />
+      <text x="20" y="57" fill="#475569" font-family="monospace" font-size="8.5">OFFICER_ID • IP:10.14.88 • IST</text>
+    </g>
+
+    <!-- Tamper Attack Simulation Box -->
+    <g transform="translate(16, 356)">
+      <rect width="243" height="88" rx="10" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5" />
+      <text x="14" y="20" fill="#be123c" font-family="system-ui, sans-serif" font-size="11" font-weight="800">
+        TAMPER ATTACK SIMULATOR
+      </text>
+      <text x="14" y="37" fill="#881337" font-family="system-ui, sans-serif" font-size="9.5">• Single-bit payload corruption</text>
+      <text x="14" y="52" fill="#881337" font-family="system-ui, sans-serif" font-size="9.5">• Immediate hash mismatch alert</text>
+      <text x="14" y="67" fill="#881337" font-family="system-ui, sans-serif" font-size="9.5">• Courtroom inadmissible warning</text>
+    </g>
+
+    <!-- Court Presentation Guarantee -->
+    <g transform="translate(16, 460)">
+      <rect width="243" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+      <text x="14" y="20" fill="#0f172a" font-family="system-ui, sans-serif" font-size="10" font-weight="700">
+        JUDICIAL BENCH VALUE:
+      </text>
+      <text x="14" y="36" fill="#475569" font-family="system-ui, sans-serif" font-size="9.5">
+        Generates 1-click Section 65B
+      </text>
+      <text x="14" y="49" fill="#047857" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">
+        evidentiary legal affidavits.
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Legal & Cryptographic Standards Bar -->
+  <g transform="translate(30, 680)">
+    <rect width="1220" height="38" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <text x="24" y="24" fill="#475569" font-family="system-ui, sans-serif" font-size="11" font-weight="600">
+      CRITICAL STANDARDS:
+    </text>
+    <text x="165" y="24" fill="#0f172a" font-family="monospace" font-size="10.5">
+      FIPS 180-4 (SHA-256) • NIST SP 800-38D (AES-256-GCM) • ISO 27037 (Digital Evidence) • Indian Evidence Act Sec 65B
+    </text>
+    <rect x="1055" y="8" width="145" height="22" rx="4" fill="#0f172a" />
+    <text x="1127" y="23" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">
+      ✓ ZERO AI HALLUCINATION
+    </text>
+  </g>
+</svg>

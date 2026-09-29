@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients for official government gold and navy -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="navyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring with Shadow -->
+  <circle cx="250" cy="250" r="236" fill="url(#navyGradient)" stroke="url(#goldGradient)" stroke-width="8" filter="url(#subtleShadow)" />
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4,4" />
+
+  <!-- Inner Band -->
+  <circle cx="250" cy="250" r="168" fill="url(#navyGradient)" stroke="url(#goldGradient)" stroke-width="4" />
+
+  <!-- Circular Text Paths -->
+  <path id="topTextPath" d="M 75,250 A 175,175 0 0,1 425,250" fill="none" />
+  <path id="bottomTextPath" d="M 425,250 A 175,175 0 0,1 75,250" fill="none" />
+
+  <!-- Circular Text -->
+  <text fill="#F59E0B" font-family="system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="800" letter-spacing="3.2">
+    <textPath href="#topTextPath" startOffset="50%" text-anchor="middle">
+      GOVERNMENT OF INDIA • MHA
+    </textPath>
+  </text>
+
+  <text fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700" letter-spacing="3.5">
+    <textPath href="#bottomTextPath" startOffset="50%" text-anchor="middle">
+      NATIONAL CRIME RECORDS BUREAU
+    </textPath>
+  </text>
+
+  <!-- Star Emblems on Sides -->
+  <g fill="#F59E0B">
+    <!-- Left Star -->
+    <polygon points="56,250 60,253 66,253 61,257 63,263 56,259 49,263 51,257 46,253 52,253" />
+    <!-- Right Star -->
+    <polygon points="444,250 448,253 454,253 449,257 451,263 444,259 437,263 439,257 434,253 440,253" />
+  </g>
+
+  <!-- Central Shield -->
+  <g transform="translate(160, 130)">
+    <!-- Shield Shape -->
+    <path d="M 90,0 Q 180,0 180,60 Q 180,160 90,210 Q 0,160 0,60 Q 0,0 90,0 Z" 
+          fill="url(#shieldGradient)" stroke="url(#goldGradient)" stroke-width="4.5" filter="url(#subtleShadow)" />
+    
+    <!-- Shield Inner Inset -->
+    <path d="M 90,10 Q 168,10 168,62 Q 168,150 90,195 Q 12,150 12,62 Q 12,10 90,10 Z" 
+          fill="none" stroke="#F59E0B" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Indian Tricolor Accent Stripe on top of shield -->
+    <g transform="translate(45, 20)">
+      <rect x="0" y="0" width="90" height="4" fill="#FF9933" rx="2" />
+      <rect x="0" y="5" width="90" height="4" fill="#FFFFFF" rx="2" />
+      <rect x="0" y="10" width="90" height="4" fill="#138808" rx="2" />
+    </g>
+
+    <!-- Ashoka Lion Capital / Dharma Chakra Symbol in Shield -->
+    <!-- Dharma Chakra 24-spoke wheel -->
+    <g transform="translate(90, 80)">
+      <circle cx="0" cy="0" r="32" fill="#0F172A" stroke="#F59E0B" stroke-width="3" />
+      <circle cx="0" cy="0" r="8" fill="#F59E0B" />
+      <!-- Spokes -->
+      <g stroke="#F59E0B" stroke-width="1.8">
+        <line x1="0" y1="-32" x2="0" y2="32" />
+        <line x1="-32" y1="0" x2="32" y2="0" />
+        <line x1="-22.6" y1="-22.6" x2="22.6" y2="22.6" />
+        <line x1="-22.6" y1="22.6" x2="22.6" y2="-22.6" />
+        <line x1="-12.2" y1="-29.5" x2="12.2" y2="29.5" />
+        <line x1="-29.5" y1="-12.2" x2="29.5" y2="12.2" />
+        <line x1="-29.5" y1="12.2" x2="29.5" y2="-12.2" />
+        <line x1="-12.2" y1="29.5" x2="12.2" y2="-29.5" />
+      </g>
+    </g>
+
+    <!-- Lock & Digital Ledger Symbol below Chakra -->
+    <g transform="translate(90, 142)">
+      <!-- Padlock Body -->
+      <rect x="-16" y="-6" width="32" height="26" rx="4" fill="#F59E0B" stroke="#B45309" stroke-width="1.5" />
+      <!-- Padlock Shackle -->
+      <path d="M -10,-6 L -10,-16 A 10,10 0 0,1 10,-16 L 10,-6" fill="none" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round" />
+      <!-- Keyhole -->
+      <circle cx="0" cy="5" r="3.5" fill="#0F172A" />
+      <polygon points="-2,6 2,6 1.5,14 -1.5,14" fill="#0F172A" />
+    </g>
+  </g>
+
+  <!-- Laurel / Wheat Wreaths along the sides -->
+  <g stroke="#D97706" fill="#F59E0B" stroke-width="1">
+    <!-- Left Wreath Leaves -->
+    <path d="M 125,290 C 115,260 115,220 128,180" fill="none" stroke-width="2.5" />
+    <path d="M 125,290 Q 110,285 105,270 Q 115,270 122,282" />
+    <path d="M 120,260 Q 102,252 100,238 Q 112,240 118,252" />
+    <path d="M 118,230 Q 102,220 102,205 Q 114,210 118,222" />
+    <path d="M 122,200 Q 110,188 114,175 Q 122,185 124,195" />
+
+    <!-- Right Wreath Leaves -->
+    <path d="M 375,290 C 385,260 385,220 372,180" fill="none" stroke-width="2.5" />
+    <path d="M 375,290 Q 390,285 395,270 Q 385,270 378,282" />
+    <path d="M 380,260 Q 398,252 400,238 Q 388,240 382,252" />
+    <path d="M 382,230 Q 398,220 398,205 Q 386,210 382,222" />
+    <path d="M 378,200 Q 390,188 386,175 Q 378,185 376,195" />
+  </g>
+
+  <!-- Motto Banner at Bottom -->
+  <g transform="translate(130, 360)">
+    <path d="M 0,10 L 25,-4 L 215,-4 L 240,10 L 225,32 L 15,32 Z" fill="#F59E0B" stroke="#92400E" stroke-width="2" filter="url(#subtleShadow)" />
+    <text x="120" y="18" fill="#0F172A" font-family="'Times New Roman', serif" font-size="14" font-weight="900" text-anchor="middle" letter-spacing="2.5">
+      सत्यमेव जयते
+    </text>
+    <text x="120" y="28" fill="#0F172A" font-family="system-ui, sans-serif" font-size="7.5" font-weight="800" text-anchor="middle" letter-spacing="1">
+      EVIDENCE • INTEGRITY • JUSTICE
+    </text>
+  </g>
+</svg>

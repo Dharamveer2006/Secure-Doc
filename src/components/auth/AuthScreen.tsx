@@ -34,7 +34,12 @@ import {
   HelpCircle,
 } from 'lucide-react';
 
-export default function AuthScreen() {
+interface AuthScreenProps {
+  onBackToPortal?: () => void;
+  initialMode?: 'LOGIN' | 'REGISTER';
+}
+
+export default function AuthScreen({ onBackToPortal, initialMode = 'LOGIN' }: AuthScreenProps) {
   const {
     login,
     register,
@@ -45,7 +50,7 @@ export default function AuthScreen() {
     lockoutSecondsRemaining,
   } = useAuth();
 
-  const [mode, setMode] = useState<'LOGIN' | 'REGISTER'>('LOGIN');
+  const [mode, setMode] = useState<'LOGIN' | 'REGISTER'>(initialMode);
 
   // Blueprint inspection modal
   const [activeBlueprintModal, setActiveBlueprintModal] = useState<'architecture' | 'custody' | null>(null);
@@ -196,6 +201,15 @@ export default function AuthScreen() {
             </span>
           </div>
           <div className="flex items-center gap-3 text-[11px] text-slate-400 font-mono">
+            {onBackToPortal && (
+              <button
+                type="button"
+                onClick={onBackToPortal}
+                className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition flex items-center gap-1 border border-slate-700"
+              >
+                <span>&larr; Back to Public Portal</span>
+              </button>
+            )}
             <span className="bg-slate-800 px-2 py-0.5 rounded border border-slate-700 text-emerald-400 font-semibold flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
               Anti-Flood Rate Limiting Armed

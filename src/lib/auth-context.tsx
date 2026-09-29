@@ -106,8 +106,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [currentTotpCode, setCurrentTotpCode] = useState('582914');
   const [totpSecondsRemaining, setTotpSecondsRemaining] = useState(30);
 
-  // Update dynamic TOTP every second
+  // Update dynamic TOTP every second ONLY when MFA modal is open
   useEffect(() => {
+    if (!isMfaModalOpen && !pendingUser) return;
     const updateTotp = () => {
       const { code, secondsRemaining } = generateTimeBasedTotp(
         pendingUser ? pendingUser.email : 'MHA_ENCLAVE_SEED'
@@ -118,7 +119,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     updateTotp();
     const interval = setInterval(updateTotp, 1000);
     return () => clearInterval(interval);
-  }, [pendingUser]);
+  }, [isMfaModalOpen, pendingUser]);
 
   // Lockout countdown timer
   useEffect(() => {

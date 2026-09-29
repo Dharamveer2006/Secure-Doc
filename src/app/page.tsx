@@ -16,7 +16,6 @@ import PublicDocketsPage from '@/components/public/PublicDocketsPage';
 
 function PageContent() {
   const { user, session } = useAuth();
-  const [hasCompletedLoading, setHasCompletedLoading] = useState(false);
   const [publicTab, setPublicTab] = useState<PublicPageTab>('home');
   const [authViewOpen, setAuthViewOpen] = useState(false);
   const [authInitialMode, setAuthInitialMode] = useState<'LOGIN' | 'REGISTER'>('LOGIN');
@@ -35,74 +34,71 @@ function PageContent() {
 
   return (
     <>
-      {!hasCompletedLoading && (
-        <WebsiteLoadingScreen onLoaded={() => setHasCompletedLoading(true)} />
+      {/* Intro Splash Overlay (fades out smoothly, skips on repeat visits) */}
+      <WebsiteLoadingScreen />
+
+      {/* Authenticated Enclave Workspace */}
+      {session.isAuthenticated && user ? (
+        <AppShell />
+      ) : authViewOpen ? (
+        /* Institutional Enclave Login & Registration View */
+        <AuthScreen
+          onBackToPortal={() => setAuthViewOpen(false)}
+          initialMode={authInitialMode}
+        />
+      ) : (
+        /* Public 3D Modern Portal */
+        <div className="min-h-screen bg-slate-100 flex flex-col font-sans selection:bg-blue-100 selection:text-blue-900">
+          <PublicNavbar
+            activeTab={publicTab}
+            onSelectTab={setPublicTab}
+            onOpenLogin={handleOpenLogin}
+            onOpenRegister={handleOpenRegister}
+          />
+
+          <main className="flex-1">
+            {publicTab === 'home' && (
+              <HomePage
+                onSelectTab={setPublicTab}
+                onOpenLogin={handleOpenLogin}
+                onOpenRegister={handleOpenRegister}
+              />
+            )}
+            {publicTab === 'about' && (
+              <AboutPage
+                onSelectTab={setPublicTab}
+                onOpenLogin={handleOpenLogin}
+              />
+            )}
+            {publicTab === 'dockets' && (
+              <PublicDocketsPage
+                onSelectTab={setPublicTab}
+                onOpenLogin={handleOpenLogin}
+              />
+            )}
+            {publicTab === 'policy' && (
+              <PrivacyPolicyPage
+                onSelectTab={setPublicTab}
+                onOpenLogin={handleOpenLogin}
+              />
+            )}
+            {publicTab === 'contact' && (
+              <ContactPage
+                onSelectTab={setPublicTab}
+                onOpenLogin={handleOpenLogin}
+              />
+            )}
+          </main>
+
+          <PublicFooter
+            onSelectTab={setPublicTab}
+            onOpenLogin={handleOpenLogin}
+          />
+        </div>
       )}
 
-      <div className={!hasCompletedLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}>
-        {/* If user is authenticated, render full Enclave AppShell */}
-        {session.isAuthenticated && user ? (
-          <AppShell />
-        ) : authViewOpen ? (
-          /* If user chose to login/register, render AuthScreen */
-          <AuthScreen
-            onBackToPortal={() => setAuthViewOpen(false)}
-            initialMode={authInitialMode}
-          />
-        ) : (
-          /* Public 3D Modern Portal */
-          <div className="min-h-screen bg-slate-100 flex flex-col font-sans selection:bg-blue-100 selection:text-blue-900">
-            <PublicNavbar
-              activeTab={publicTab}
-              onSelectTab={setPublicTab}
-              onOpenLogin={handleOpenLogin}
-              onOpenRegister={handleOpenRegister}
-            />
-
-            <main className="flex-1">
-              {publicTab === 'home' && (
-                <HomePage
-                  onSelectTab={setPublicTab}
-                  onOpenLogin={handleOpenLogin}
-                  onOpenRegister={handleOpenRegister}
-                />
-              )}
-              {publicTab === 'about' && (
-                <AboutPage
-                  onSelectTab={setPublicTab}
-                  onOpenLogin={handleOpenLogin}
-                />
-              )}
-              {publicTab === 'dockets' && (
-                <PublicDocketsPage
-                  onSelectTab={setPublicTab}
-                  onOpenLogin={handleOpenLogin}
-                />
-              )}
-              {publicTab === 'policy' && (
-                <PrivacyPolicyPage
-                  onSelectTab={setPublicTab}
-                  onOpenLogin={handleOpenLogin}
-                />
-              )}
-              {publicTab === 'contact' && (
-                <ContactPage
-                  onSelectTab={setPublicTab}
-                  onOpenLogin={handleOpenLogin}
-                />
-              )}
-            </main>
-
-            <PublicFooter
-              onSelectTab={setPublicTab}
-              onOpenLogin={handleOpenLogin}
-            />
-          </div>
-        )}
-
-        {/* Global Multi-Factor Authenticator Modal */}
-        <MfaModal />
-      </div>
+      {/* Global Multi-Factor Authenticator Modal */}
+      <MfaModal />
     </>
   );
 }

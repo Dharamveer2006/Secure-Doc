@@ -11,6 +11,12 @@ export interface GovernmentUser {
   stationOrCourt: string;
   isMfaVerified: boolean;
   avatarUrl?: string;
+  cadre?: string;
+  govIdType?: string;
+  govIdNumber?: string;
+  jurisdictionState?: string;
+  password?: string;
+  registeredAt?: string;
 }
 
 export interface AuthSession {
